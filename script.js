@@ -32,7 +32,7 @@ const cancleButton = document.getElementById('cancleAlarm');
 const inputText = document.getElementById('inputText');
 
 // INPUT AUDIO AND TONE
-let ringtone = new Audio("/MyAlarm/ringtone.mp3");
+let ringtone = new Audio("ringtone.mp3");
 let tone = document.getElementById('tone');
 
 // CREATE A VARIABLE
