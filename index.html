@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Boxicon Link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Webpage Title -->
+    <title>Alarm</title>
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <!-- Head Section -->
+        <div class="head_section">
+            <h2>Alarm</h2>
+            <i class='bx bx-alarm'></i>
+        </div>
+        
+        <!-- Current Time -->
+        <div class="alarm_time">
+            <p class="time" id="currentTime">00:00:00 AM</p>
+        </div>
+
+        <!-- Title  -->
+        <div class="set_alarm_title">
+            <i class='bx bx-edit' ></i>
+            <h2>Set Alarm</h2>
+        </div>
+
+        <!-- Set Alarm Main Box  -->
+        <div class="set_alarm">
+
+            <!-- Up Arrow -->
+            <div class="btn_section">
+                <button class="btn" id="increHour"><i class='bx bx-chevron-up'></i></button>
+                <button class="btn" id="increMinute"><i class='bx bx-chevron-up'></i></button>
+                <button class="btn" id="upAMPM"><i class='bx bx-chevron-up'></i></button>
+            </div>
+
+            <!-- Input Time  -->
+            <div class="time_section">
+                <span class=" settime hour" id="hour">00</span>
+                <span class=" settime colon" id="colon">:</span>
+                <span class=" settime minute" id="minute">00</span>
+                <span class=" settime colon" id="colon">:</span>
+                <span class=" settime ampm" id="AMPM">PM</span>
+            </div>
+
+            <!-- Down Arrow -->
+            <div class="btn_section">
+                <button class="btn" id="decreHour"><i class='bx bx-chevron-down'></i></button>
+                <button class="btn" id="decreMinute"><i class='bx bx-chevron-down'></i></button>
+                <button class="btn" id="downAMPM"><i class='bx bx-chevron-down'></i></button>
+            </div>
+        </div>
+
+        <!-- Input Text -->
+        <div class="input_text">
+            <i class='bx bx-edit' ></i>
+            <input type="text" id="inputText">
+        </div>
+
+        <!-- Set or Cancle Alarm Button  -->
+        <div class="set_alarm_btn_section_or_cancle">
+            <button class="btn setalarm" id="setAlarm"><i class='bx bx-save' ></i>Save</button>
+            <button class="btn canclealarm" id="cancleAlarm"><i class='bx bx-x'></i>Cancle</button>
+        </div>
+
+    </div>
+
+    <!-- Dim background When Popup window Active for responsive Device -->
+    <div class="dim_background" id="dimBackground"></div>
+
+    <!-- Popup Window Section -->
+    <div class="popup_wrapper" id="popupWindow">
+        
+        <div class="popup_head_section">
+            <h2><i class='bx bx-alarm'></i>Alarm</h2>
+            <i class='bx bx-x' id="cross"></i>
+        </div>
+
+        <small id="popup_text">-- --</small>
+        <p id="popup_alarm_time">00:00 PM</p>
+
+        <div class="set_dismiss_or_snooze">
+            <button class="btn snooze" id="snooze">Snooze</button>
+            <button class="btn dismiss" id="dismiss">Dismiss</button>
+        </div>
+        
+    </div>
+
+    <!-- Set Alarm Notification Section -->
+    <div class="set_alarm_notification" id="setAlramNotification">
+        <i class='bx bx-alarm'></i>
+        <h2>Alarm Set</h2>
+    </div>
+    
+    <!-- JavaScript Link -->
+    <script src="script.js"></script>
+</body>
+
+<!-- Audio Tone -->
+<audio src="/audio/tone.wav" id="tone"></audio>
+
+</html>
